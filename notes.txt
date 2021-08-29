@@ -1,0 +1,59 @@
+///////////////////////////////////////////////////////////
+// BACKEND SET-UP
+npx express-generator
+npm install
+npm install @types/express
+npm install typescript 
+npx tsc --init
+
+tsconfig.json (google express typescript config)
+  "target": "es6"
+  "moduleResolution": "node" 
+  "outDir": "./dist"
+  "baseURL": "./"
+  "paths": {"*": ["node_modules/*"]}
+  "include": ["src/**/*"]                // OUTSIDE COMPILER OPTIONS!!!
+
+npm i kill-port-process -g
+
+package.json
+  "scripts":{
+    "compile": "tsc && node ./bin/www || exit 1",
+    "start": "nodemon -e ts -x \"npm run compile\""	
+tsc
+
+npm install bcrypt
+npm install @types/bcrypt
+npm install jsonwebtoken
+npm install @types/jsonwebtoken
+npm install dotenv
+
+npm install prisma
+npx prisma init
+// npx prisma db pull --force
+// npx prisma generate
+// npx prisma migrate dev
+npm start
+
+///////////////////////////////////////////////////////////////
+// STEPS TO ACHIEVE OBJECTIVES
+1) Create a user with a salted hashed user password
+   Created service.ts and imported bcrypt
+2) Create a login route called auth
+
+
+
+
+//////////////////////////////////////////////////////////////
+// FRONTEND
+1) npm init @vitejs/app
+2) cd boolean-uk-ts-greengrocers
+3) npm install
+4) npm run dev
+
+
+// npm install --save-dev @types/node
+
+/////////////////////////////////////////////////////////////
+// JSON
+1) json-server --watch db/db.json -p 3100
